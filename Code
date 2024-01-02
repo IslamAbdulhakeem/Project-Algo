@@ -1,0 +1,9 @@
+def perm(n):
+    p=[]
+    if(n == 1):
+        p.append("1")
+    else:
+        for i in perm(n - 1):
+            for j in range(len(i) + 1):
+                p.append(i[:j] + str(n) + i[j:])
+    return p
